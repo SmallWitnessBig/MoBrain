@@ -41,3 +41,10 @@ void copyBuffer(
     const vk::DeviceSize size,
     const vk::DeviceSize offset = 0
 );
+void coverBuffer(
+    const vk::raii::Buffer& buffersrc,
+    const vk::DeviceSize srcOffset,
+    const vk::raii::Buffer& bufferdst,
+    const vk::DeviceSize dstOffset,
+    const vk::DeviceSize size
+);

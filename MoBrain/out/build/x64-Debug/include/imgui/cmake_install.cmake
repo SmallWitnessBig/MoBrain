@@ -1,8 +1,8 @@
-# Install script for directory: D:/MoBrain/MoBrain/MoBrain/include/imgui
+# Install script for directory: C:/my/MoBrain/MoBrain/MoBrain/include/imgui
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/MoBrain/MoBrain/MoBrain/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/my/MoBrain/MoBrain/MoBrain/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,6 +35,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/include/imgui/install_local_manifest.txt"
+  file(WRITE "C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/include/imgui/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

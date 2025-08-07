@@ -41,6 +41,8 @@ void initVulkan() {
     //descriptor
     createDescriptorPool();
     createDescriptorSets();
+
+    app.bufferM.init();
 }
 
 
@@ -177,3 +179,8 @@ void createSurface() {
     app.surface = vk::raii::SurfaceKHR(app.instance, cSurface);
 }
 
+void initInstanceData() {
+    InstanceData i;
+
+
+};

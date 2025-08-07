@@ -19,7 +19,7 @@ namespace camera{
     
     // 鼠标移动回调函数，用于处理视角旋转
     void CursorPos(){
-        if (enableMouse) {
+        if (enableMouse&&app.isInGame) {
             int width, height;
             glfwGetWindowSize(app.window, &width, &height);
             double xpos, ypos;
@@ -59,7 +59,7 @@ namespace camera{
 
     // 鼠标滚轮回调函数，用于处理相机缩放
     void Scroll(GLFWwindow* window,double xoffset, double yoffset){
-        if (enableScroll) {
+        if (enableScroll&&app.isInGame) {
             if (fov >= 1.0f && fov <= 45.0f)
                 fov -= yoffset*2.5f;
             if (fov <= 1.0f)
@@ -78,39 +78,35 @@ namespace camera{
         
         if (glfwGetKey(app.window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
             glfwSetWindowShouldClose(app.window, GLFW_TRUE);
-        if (glfwGetKey(app.window, GLFW_KEY_W) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_W) == GLFW_REPEAT){
-            pos += cameraSpeed * front * deltaTime;
-        }
-        if (glfwGetKey(app.window, GLFW_KEY_S) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_S) == GLFW_REPEAT){
-            pos -= cameraSpeed * front * deltaTime;
-        }
-        if (glfwGetKey(app.window, GLFW_KEY_A) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_A) == GLFW_REPEAT){
-            pos -= glm::normalize(glm::cross(front, up)) * cameraSpeed * deltaTime;
-        }
-        if (glfwGetKey(app.window, GLFW_KEY_D) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_D) == GLFW_REPEAT){
-            pos += glm::normalize(glm::cross(front, up)) * cameraSpeed * deltaTime;
-        }
-        if (glfwGetKey(app.window, GLFW_KEY_SPACE) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_SPACE) == GLFW_REPEAT){
-            pos += up * cameraSpeed * deltaTime;
-        }
-        if (glfwGetKey(app.window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_LEFT_SHIFT) == GLFW_REPEAT){
-            pos -= up * cameraSpeed * deltaTime;
-        }
-        if (glfwGetKey(app.window, GLFW_KEY_Q) == GLFW_PRESS|| glfwGetKey(app.window, GLFW_KEY_Q) == GLFW_REPEAT){
-           enableMouse=!enableMouse;
-            if(enableMouse){
-                glfwSetInputMode(app.window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);          
-                int width, height;
-                glfwGetWindowSize(app.window, &width, &height);
-                glfwSetCursorPos(app.window, width / 2.0, height / 2.0);
+        if (app.isInGame) {
+            glm::vec3 deltaPos = cameraSpeed * front * deltaTime;
+            glm::vec3 deltaPos1 = glm::normalize(glm::cross(front, up)) * cameraSpeed * deltaTime;
+            if (glfwGetKey(app.window, GLFW_KEY_W) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_W) == GLFW_REPEAT) {
+                pos += glm::vec3{ deltaPos.x,0,deltaPos.z };
             }
-            else {
-                glfwSetInputMode(app.window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+            if (glfwGetKey(app.window, GLFW_KEY_S) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_S) == GLFW_REPEAT) {
+                pos -= glm::vec3{ deltaPos.x,0,deltaPos.z };
             }
+            if (glfwGetKey(app.window, GLFW_KEY_A) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_A) == GLFW_REPEAT) {
+                pos -= glm::vec3{ deltaPos1.x,0,deltaPos1.z };
+            }
+            if (glfwGetKey(app.window, GLFW_KEY_D) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_D) == GLFW_REPEAT) {
+                pos += glm::vec3{ deltaPos1.x,0,deltaPos1.z };
+            }
+            if (glfwGetKey(app.window, GLFW_KEY_SPACE) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_SPACE) == GLFW_REPEAT) {
+                pos += up * cameraSpeed * deltaTime;
+            }
+            if (glfwGetKey(app.window, GLFW_KEY_LEFT_SHIFT) == GLFW_PRESS || glfwGetKey(app.window, GLFW_KEY_LEFT_SHIFT) == GLFW_REPEAT) {
+                pos -= up * cameraSpeed * deltaTime;
+            }
+
+
         }
+        
     };
     void updateCamera(){
         CursorPos();
         Key();
     };
 }
+

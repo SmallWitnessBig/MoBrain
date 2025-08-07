@@ -133,9 +133,6 @@ void updateUniformBuffer(const uint32_t currentImage) {
     // 创建统一缓冲区对象
     
 
-    // 设置模型矩阵，让物体绕 Z 轴旋转
-    app.ubo.model =  glm::mat4(1.0f);
-
     // 使用 camera 命名空间中的参数设置视图矩阵
     glm::vec3 cameraPos = camera::pos;
     glm::vec3 cameraFront = camera::front;
@@ -154,7 +151,7 @@ void updateUniformBuffer(const uint32_t currentImage) {
     app.ubo.proj[1][1] *= -1;
 
     // 计算最终的MVP矩阵
-    glm::mat4 mvp = app.ubo.proj * app.ubo.view * app.ubo.model;
+    glm::mat4 mvp = app.ubo.proj * app.ubo.view;
     // 将MVP矩阵的数据复制到对应的内存映射区
     memcpy(app.uniformBuffersMapped[currentImage], &mvp, sizeof(mvp));
 }

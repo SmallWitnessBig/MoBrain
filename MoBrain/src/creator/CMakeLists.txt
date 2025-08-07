@@ -20,5 +20,7 @@ target_link_libraries(MoBrain PRIVATE
     imgui  
     ${CMAKE_SOURCE_DIR}/lib/glfw3dll.lib
     ${CMAKE_SOURCE_DIR}/lib/vulkan-1.lib
+    ${CMAKE_SOURCE_DIR}/lib/opencv_world4120.lib
+    ${CMAKE_SOURCE_DIR}/lib/opencv_world4120d.lib
 )
 

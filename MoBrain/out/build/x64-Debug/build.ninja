@@ -39,13 +39,13 @@ include CMakeFiles\rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = D$:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\
+cmake_ninja_workdir = C$:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -56,7 +56,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -65,7 +65,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/CMakeLists.txt
 # =============================================================================
 
 
@@ -73,7 +73,7 @@ build rebuild_cache: phony CMakeFiles\rebuild_cache.util
 # Utility command for edit_cache
 
 build include\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -84,7 +84,7 @@ build include\edit_cache: phony include\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build include\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -93,7 +93,7 @@ build include\rebuild_cache: phony include\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/include/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/include/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -105,68 +105,68 @@ build include\rebuild_cache: phony include\CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_imgui: phony || .
 
-build include\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\include\imgui\imgui.cpp || cmake_object_order_depends_target_imgui
+build include\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\imgui.cpp || cmake_object_order_depends_target_imgui
   DEFINES = -DIMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends -ID:\MoBrain\MoBrain\MoBrain\include
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends -IC:\my\MoBrain\MoBrain\MoBrain\include
   OBJECT_DIR = include\imgui\CMakeFiles\imgui.dir
   OBJECT_FILE_DIR = include\imgui\CMakeFiles\imgui.dir
   TARGET_COMPILE_PDB = include\imgui\CMakeFiles\imgui.dir\imgui.pdb
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
 
-build include\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\include\imgui\imgui_demo.cpp || cmake_object_order_depends_target_imgui
+build include\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\imgui_demo.cpp || cmake_object_order_depends_target_imgui
   DEFINES = -DIMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends -ID:\MoBrain\MoBrain\MoBrain\include
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends -IC:\my\MoBrain\MoBrain\MoBrain\include
   OBJECT_DIR = include\imgui\CMakeFiles\imgui.dir
   OBJECT_FILE_DIR = include\imgui\CMakeFiles\imgui.dir
   TARGET_COMPILE_PDB = include\imgui\CMakeFiles\imgui.dir\imgui.pdb
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
 
-build include\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\include\imgui\imgui_draw.cpp || cmake_object_order_depends_target_imgui
+build include\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\imgui_draw.cpp || cmake_object_order_depends_target_imgui
   DEFINES = -DIMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends -ID:\MoBrain\MoBrain\MoBrain\include
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends -IC:\my\MoBrain\MoBrain\MoBrain\include
   OBJECT_DIR = include\imgui\CMakeFiles\imgui.dir
   OBJECT_FILE_DIR = include\imgui\CMakeFiles\imgui.dir
   TARGET_COMPILE_PDB = include\imgui\CMakeFiles\imgui.dir\imgui.pdb
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
 
-build include\imgui\CMakeFiles\imgui.dir\imgui_tables.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\include\imgui\imgui_tables.cpp || cmake_object_order_depends_target_imgui
+build include\imgui\CMakeFiles\imgui.dir\imgui_tables.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\imgui_tables.cpp || cmake_object_order_depends_target_imgui
   DEFINES = -DIMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends -ID:\MoBrain\MoBrain\MoBrain\include
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends -IC:\my\MoBrain\MoBrain\MoBrain\include
   OBJECT_DIR = include\imgui\CMakeFiles\imgui.dir
   OBJECT_FILE_DIR = include\imgui\CMakeFiles\imgui.dir
   TARGET_COMPILE_PDB = include\imgui\CMakeFiles\imgui.dir\imgui.pdb
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
 
-build include\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\include\imgui\imgui_widgets.cpp || cmake_object_order_depends_target_imgui
+build include\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\imgui_widgets.cpp || cmake_object_order_depends_target_imgui
   DEFINES = -DIMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends -ID:\MoBrain\MoBrain\MoBrain\include
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends -IC:\my\MoBrain\MoBrain\MoBrain\include
   OBJECT_DIR = include\imgui\CMakeFiles\imgui.dir
   OBJECT_FILE_DIR = include\imgui\CMakeFiles\imgui.dir
   TARGET_COMPILE_PDB = include\imgui\CMakeFiles\imgui.dir\imgui.pdb
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
 
-build include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_glfw.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\include\imgui\backends\imgui_impl_glfw.cpp || cmake_object_order_depends_target_imgui
+build include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_glfw.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends\imgui_impl_glfw.cpp || cmake_object_order_depends_target_imgui
   DEFINES = -DIMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends -ID:\MoBrain\MoBrain\MoBrain\include
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends -IC:\my\MoBrain\MoBrain\MoBrain\include
   OBJECT_DIR = include\imgui\CMakeFiles\imgui.dir
   OBJECT_FILE_DIR = include\imgui\CMakeFiles\imgui.dir\backends
   TARGET_COMPILE_PDB = include\imgui\CMakeFiles\imgui.dir\imgui.pdb
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
 
-build include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_vulkan.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\include\imgui\backends\imgui_impl_vulkan.cpp || cmake_object_order_depends_target_imgui
+build include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_vulkan.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends\imgui_impl_vulkan.cpp || cmake_object_order_depends_target_imgui
   DEFINES = -DIMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends -ID:\MoBrain\MoBrain\MoBrain\include
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends -IC:\my\MoBrain\MoBrain\MoBrain\include
   OBJECT_DIR = include\imgui\CMakeFiles\imgui.dir
   OBJECT_FILE_DIR = include\imgui\CMakeFiles\imgui.dir\backends
   TARGET_COMPILE_PDB = include\imgui\CMakeFiles\imgui.dir\imgui.pdb
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
 
 
 # =============================================================================
@@ -174,24 +174,24 @@ build include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_vulkan.cpp.obj: CXX
 
 
 #############################################
-# Link the static library D:\MoBrain\MoBrain\MoBrain\lib\imgui.lib
+# Link the static library C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib
 
-build D$:\MoBrain\MoBrain\MoBrain\lib\imgui.lib: CXX_STATIC_LIBRARY_LINKER__imgui_Debug include\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj include\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj include\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj include\imgui\CMakeFiles\imgui.dir\imgui_tables.cpp.obj include\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_glfw.cpp.obj include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_vulkan.cpp.obj
+build C$:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib: CXX_STATIC_LIBRARY_LINKER__imgui_Debug include\imgui\CMakeFiles\imgui.dir\imgui.cpp.obj include\imgui\CMakeFiles\imgui.dir\imgui_demo.cpp.obj include\imgui\CMakeFiles\imgui.dir\imgui_draw.cpp.obj include\imgui\CMakeFiles\imgui.dir\imgui_tables.cpp.obj include\imgui\CMakeFiles\imgui.dir\imgui_widgets.cpp.obj include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_glfw.cpp.obj include\imgui\CMakeFiles\imgui.dir\backends\imgui_impl_vulkan.cpp.obj
   LANGUAGE_COMPILE_FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64
   OBJECT_DIR = include\imgui\CMakeFiles\imgui.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = include\imgui\CMakeFiles\imgui.dir\imgui.pdb
-  TARGET_FILE = D:\MoBrain\MoBrain\MoBrain\lib\imgui.lib
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
+  TARGET_FILE = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build include\imgui\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include\imgui && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include\imgui && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -202,7 +202,7 @@ build include\imgui\edit_cache: phony include\imgui\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build include\imgui\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include\imgui && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include\imgui && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -211,7 +211,7 @@ build include\imgui\rebuild_cache: phony include\imgui\CMakeFiles\rebuild_cache.
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/include/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/include/CMakeLists.txt
 # =============================================================================
 
 
@@ -219,7 +219,7 @@ build include\imgui\rebuild_cache: phony include\imgui\CMakeFiles\rebuild_cache.
 # Utility command for edit_cache
 
 build include\glm\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include\glm && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include\glm && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -230,7 +230,7 @@ build include\glm\edit_cache: phony include\glm\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build include\glm\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include\glm && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\include\glm && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -239,7 +239,7 @@ build include\glm\rebuild_cache: phony include\glm\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/CMakeLists.txt
 # =============================================================================
 
 
@@ -247,7 +247,7 @@ build include\glm\rebuild_cache: phony include\glm\CMakeFiles\rebuild_cache.util
 # Utility command for edit_cache
 
 build src\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -258,7 +258,7 @@ build src\edit_cache: phony src\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build src\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -267,7 +267,7 @@ build src\rebuild_cache: phony src\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/src/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/src/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -279,141 +279,181 @@ build src\rebuild_cache: phony src\CMakeFiles\rebuild_cache.util
 
 build cmake_object_order_depends_target_MoBrain: phony || cmake_object_order_depends_target_imgui
 
-build src\creator\CMakeFiles\MoBrain.dir\main.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\creator\main.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\main.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\creator\main.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\camera\camera.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\camera\camera.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\camera\camera.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera\camera.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\camera
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core\context.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\core\context.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core\context.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core\context.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\buffers.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\buffers.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core\neurons.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core\neurons.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
+  OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core
+  TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core\structure.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core\structure.cpp || cmake_object_order_depends_target_MoBrain
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
+  OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core
+  TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\buffers.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\buffers.cpp || cmake_object_order_depends_target_MoBrain
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\commandpool.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\commandpool.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\commandpool.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\commandpool.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\descriptor.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\descriptor.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\descriptor.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\descriptor.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\devices.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\devices.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\devices.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\devices.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\drawer.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\drawer.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\drawer.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\drawer.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\graphicspipeline.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\graphicspipeline.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\graphicspipeline.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\graphicspipeline.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\image.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\image.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\image.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\image.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\imageview.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\imageview.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\imageview.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\imageview.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\renderpass.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\renderpass.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\renderpass.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\renderpass.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\swapchain.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\swapchain.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\swapchain.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\swapchain.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\vulkaninit.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\vulkaninit.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\vulkaninit.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\vulkaninit.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\gui\gui.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\gui\gui.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\gui\gui.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui\gui.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\gui
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\readfile.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\utils\readfile.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\connection.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils\connection.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
-build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\structs.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug D$:\MoBrain\MoBrain\MoBrain\src\mobrain\utils\structs.cpp || cmake_object_order_depends_target_MoBrain
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\readfile.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils\readfile.cpp || cmake_object_order_depends_target_MoBrain
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
-  INCLUDES = -ID:\MoBrain\MoBrain\MoBrain\include -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\camera -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\core -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\engine -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\gui -ID:\MoBrain\MoBrain\MoBrain\src\mobrain\utils -ID:\MoBrain\MoBrain\MoBrain\include\imgui -ID:\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
   OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\role.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils\role.cpp || cmake_object_order_depends_target_MoBrain
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
+  OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils
+  TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\screenshot.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils\screenshot.cpp || cmake_object_order_depends_target_MoBrain
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
+  OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils
+  TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+
+build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\structs.cpp.obj: CXX_COMPILER__MoBrain_unscanned_Debug C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils\structs.cpp || cmake_object_order_depends_target_MoBrain
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++latest -MDd -Zi
+  INCLUDES = -IC:\my\MoBrain\MoBrain\MoBrain\include -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui -IC:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui -IC:\my\MoBrain\MoBrain\MoBrain\include\imgui\backends
+  OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
+  OBJECT_FILE_DIR = src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils
+  TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
 
 # =============================================================================
@@ -421,26 +461,26 @@ build src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\structs.cpp.obj: CXX_C
 
 
 #############################################
-# Link the executable D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
+# Link the executable C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
 
-build D$:\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe: CXX_EXECUTABLE_LINKER__MoBrain_Debug src\creator\CMakeFiles\MoBrain.dir\main.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\camera\camera.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core\context.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\buffers.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\commandpool.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\descriptor.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\devices.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\drawer.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\graphicspipeline.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\image.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\imageview.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\renderpass.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\swapchain.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\vulkaninit.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\gui\gui.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\readfile.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\structs.cpp.obj | D$:\MoBrain\MoBrain\MoBrain\lib\imgui.lib D$:\MoBrain\MoBrain\MoBrain\lib\glfw3dll.lib D$:\MoBrain\MoBrain\MoBrain\lib\vulkan-1.lib || D$:\MoBrain\MoBrain\MoBrain\lib\imgui.lib
+build C$:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe: CXX_EXECUTABLE_LINKER__MoBrain_Debug src\creator\CMakeFiles\MoBrain.dir\main.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\camera\camera.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core\context.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core\neurons.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\core\structure.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\buffers.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\commandpool.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\descriptor.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\devices.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\drawer.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\graphicspipeline.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\image.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\imageview.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\renderpass.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\swapchain.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\engine\vulkaninit.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\gui\gui.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\connection.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\readfile.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\role.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\screenshot.cpp.obj src\creator\CMakeFiles\MoBrain.dir\__\mobrain\utils\structs.cpp.obj | C$:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib C$:\my\MoBrain\MoBrain\MoBrain\lib\glfw3dll.lib C$:\my\MoBrain\MoBrain\MoBrain\lib\vulkan-1.lib C$:\my\MoBrain\MoBrain\MoBrain\lib\opencv_world4120.lib C$:\my\MoBrain\MoBrain\MoBrain\lib\opencv_world4120d.lib || C$:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = D:\MoBrain\MoBrain\MoBrain\lib\imgui.lib  D:\MoBrain\MoBrain\MoBrain\lib\glfw3dll.lib  D:\MoBrain\MoBrain\MoBrain\lib\vulkan-1.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = C:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib  C:\my\MoBrain\MoBrain\MoBrain\lib\glfw3dll.lib  C:\my\MoBrain\MoBrain\MoBrain\lib\vulkan-1.lib  C:\my\MoBrain\MoBrain\MoBrain\lib\opencv_world4120.lib  C:\my\MoBrain\MoBrain\MoBrain\lib\opencv_world4120d.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = src\creator\CMakeFiles\MoBrain.dir
-  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\creator && C:\Users\HASEE\AppData\Local\Microsoft\WindowsApps\pwsh.exe -noprofile -executionpolicy Bypass -file C:/Users/HASEE/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/MoBrain/MoBrain/MoBrain/bin/MoBrain.exe -installedDir C:/Users/HASEE/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
+  POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = src\creator\CMakeFiles\MoBrain.dir\
-  TARGET_FILE = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
-  TARGET_IMPLIB = D:\MoBrain\MoBrain\MoBrain\lib\MoBrain.lib
-  TARGET_PDB = D:\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
+  TARGET_FILE = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
+  TARGET_IMPLIB = C:\my\MoBrain\MoBrain\MoBrain\lib\MoBrain.lib
+  TARGET_PDB = C:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.pdb
 
 
 #############################################
 # Utility command for edit_cache
 
 build src\creator\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\creator && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\creator && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -451,7 +491,7 @@ build src\creator\edit_cache: phony src\creator\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build src\creator\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\creator && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\creator && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -460,7 +500,7 @@ build src\creator\rebuild_cache: phony src\creator\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/src/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/src/CMakeLists.txt
 # =============================================================================
 
 
@@ -468,7 +508,7 @@ build src\creator\rebuild_cache: phony src\creator\CMakeFiles\rebuild_cache.util
 # Utility command for edit_cache
 
 build src\mobrain\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -479,7 +519,7 @@ build src\mobrain\edit_cache: phony src\mobrain\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build src\mobrain\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -488,7 +528,7 @@ build src\mobrain\rebuild_cache: phony src\mobrain\CMakeFiles\rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
 # =============================================================================
 
 
@@ -496,7 +536,7 @@ build src\mobrain\rebuild_cache: phony src\mobrain\CMakeFiles\rebuild_cache.util
 # Utility command for edit_cache
 
 build src\mobrain\core\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\core && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\core && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -507,7 +547,7 @@ build src\mobrain\core\edit_cache: phony src\mobrain\core\CMakeFiles\edit_cache.
 # Utility command for rebuild_cache
 
 build src\mobrain\core\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\core && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\core && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -516,7 +556,7 @@ build src\mobrain\core\rebuild_cache: phony src\mobrain\core\CMakeFiles\rebuild_
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
 # =============================================================================
 
 
@@ -524,7 +564,7 @@ build src\mobrain\core\rebuild_cache: phony src\mobrain\core\CMakeFiles\rebuild_
 # Utility command for edit_cache
 
 build src\mobrain\gui\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\gui && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\gui && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -535,7 +575,7 @@ build src\mobrain\gui\edit_cache: phony src\mobrain\gui\CMakeFiles\edit_cache.ut
 # Utility command for rebuild_cache
 
 build src\mobrain\gui\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\gui && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\gui && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -544,7 +584,7 @@ build src\mobrain\gui\rebuild_cache: phony src\mobrain\gui\CMakeFiles\rebuild_ca
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
 # =============================================================================
 
 
@@ -552,7 +592,7 @@ build src\mobrain\gui\rebuild_cache: phony src\mobrain\gui\CMakeFiles\rebuild_ca
 # Utility command for edit_cache
 
 build src\mobrain\utils\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\utils && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\utils && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -563,7 +603,7 @@ build src\mobrain\utils\edit_cache: phony src\mobrain\utils\CMakeFiles\edit_cach
 # Utility command for rebuild_cache
 
 build src\mobrain\utils\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\utils && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\utils && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -572,7 +612,7 @@ build src\mobrain\utils\rebuild_cache: phony src\mobrain\utils\CMakeFiles\rebuil
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
 # =============================================================================
 
 
@@ -580,7 +620,7 @@ build src\mobrain\utils\rebuild_cache: phony src\mobrain\utils\CMakeFiles\rebuil
 # Utility command for edit_cache
 
 build src\mobrain\engine\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\engine && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\engine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -591,7 +631,7 @@ build src\mobrain\engine\edit_cache: phony src\mobrain\engine\CMakeFiles\edit_ca
 # Utility command for rebuild_cache
 
 build src\mobrain\engine\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\engine && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\engine && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -600,7 +640,7 @@ build src\mobrain\engine\rebuild_cache: phony src\mobrain\engine\CMakeFiles\rebu
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# D:/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
+# C:/my/MoBrain/MoBrain/MoBrain/src/mobrain/CMakeLists.txt
 # =============================================================================
 
 
@@ -608,7 +648,7 @@ build src\mobrain\engine\rebuild_cache: phony src\mobrain\engine\CMakeFiles\rebu
 # Utility command for edit_cache
 
 build src\mobrain\camera\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\camera && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\camera && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -619,7 +659,7 @@ build src\mobrain\camera\edit_cache: phony src\mobrain\camera\CMakeFiles\edit_ca
 # Utility command for rebuild_cache
 
 build src\mobrain\camera\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\camera && D:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe --regenerate-during-build -SD:\MoBrain\MoBrain\MoBrain -BD:\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
+  COMMAND = C:\windows\system32\cmd.exe /C "cd /D C:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug\src\mobrain\camera && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -SC:\my\MoBrain\MoBrain\MoBrain -BC:\my\MoBrain\MoBrain\MoBrain\out\build\x64-Debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -629,13 +669,13 @@ build src\mobrain\camera\rebuild_cache: phony src\mobrain\camera\CMakeFiles\rebu
 # =============================================================================
 # Target aliases.
 
-build MoBrain: phony D$:\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
+build MoBrain: phony C$:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
 
-build MoBrain.exe: phony D$:\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
+build MoBrain.exe: phony C$:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
 
-build imgui: phony D$:\MoBrain\MoBrain\MoBrain\lib\imgui.lib
+build imgui: phony C$:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib
 
-build imgui.lib: phony D$:\MoBrain\MoBrain\MoBrain\lib\imgui.lib
+build imgui.lib: phony C$:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib
 
 # =============================================================================
 # Folder targets.
@@ -643,84 +683,84 @@ build imgui.lib: phony D$:\MoBrain\MoBrain\MoBrain\lib\imgui.lib
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug
 
 build all: phony include\all src\all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/include
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/include
 
 build include\all: phony include\imgui\all include\glm\all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/include/glm
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/include/glm
 
 build include\glm\all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/include/imgui
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/include/imgui
 
-build include\imgui\all: phony D$:\MoBrain\MoBrain\MoBrain\lib\imgui.lib
+build include\imgui\all: phony C$:\my\MoBrain\MoBrain\MoBrain\lib\imgui.lib
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src
 
 build src\all: phony src\creator\all src\mobrain\all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/creator
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/creator
 
-build src\creator\all: phony D$:\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
+build src\creator\all: phony C$:\my\MoBrain\MoBrain\MoBrain\bin\MoBrain.exe
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain
 
 build src\mobrain\all: phony src\mobrain\core\all src\mobrain\gui\all src\mobrain\utils\all src\mobrain\engine\all src\mobrain\camera\all
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/camera
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/camera
 
 build src\mobrain\camera\all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/core
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/core
 
 build src\mobrain\core\all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/engine
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/engine
 
 build src\mobrain\engine\all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/gui
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/gui
 
 build src\mobrain\gui\all: phony
 
 # =============================================================================
 
 #############################################
-# Folder: D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/utils
+# Folder: C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/utils
 
 build src\mobrain\utils\all: phony
 
@@ -731,14 +771,14 @@ build src\mobrain\utils\all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:\Users\HASEE\vcpkg\scripts\buildsystems\vcpkg.cmake CMakeCache.txt CMakeFiles\3.31.6-msvc6\CMakeCCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeCXXCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeRCCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeSystem.cmake D$:\MoBrain\MoBrain\MoBrain\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\include\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\include\glm\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\include\imgui\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\creator\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\camera\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\core\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\gui\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\utils\CMakeLists.txt D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeDependentOption.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake C$:\my\MoBrain\MoBrain\MoBrain\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\include\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\include\glm\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\creator\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils\CMakeLists.txt CMakeCache.txt CMakeFiles\3.31.6-msvc6\CMakeCCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeCXXCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeRCCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Users\HASEE\vcpkg\scripts\buildsystems\vcpkg.cmake CMakeCache.txt CMakeFiles\3.31.6-msvc6\CMakeCCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeCXXCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeRCCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeSystem.cmake D$:\MoBrain\MoBrain\MoBrain\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\include\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\include\glm\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\include\imgui\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\creator\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\camera\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\core\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\engine\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\gui\CMakeLists.txt D$:\MoBrain\MoBrain\MoBrain\src\mobrain\utils\CMakeLists.txt D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeDependentOption.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake D$:\vs3\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake: phony
+build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake C$:\my\MoBrain\MoBrain\MoBrain\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\include\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\include\glm\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\include\imgui\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\creator\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\camera\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\core\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\engine\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\gui\CMakeLists.txt C$:\my\MoBrain\MoBrain\MoBrain\src\mobrain\utils\CMakeLists.txt CMakeCache.txt CMakeFiles\3.31.6-msvc6\CMakeCCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeCXXCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeRCCompiler.cmake CMakeFiles\3.31.6-msvc6\CMakeSystem.cmake: phony
 
 
 #############################################

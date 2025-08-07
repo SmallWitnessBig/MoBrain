@@ -42,9 +42,9 @@ public:
     vk::raii::DeviceMemory                      vertexBufferMemory = VK_NULL_HANDLE;
     vk::raii::Buffer                            vertexBuffer = VK_NULL_HANDLE;
     vk::raii::DeviceMemory                      indexBufferMemory = VK_NULL_HANDLE;
-    vk::raii::Buffer                            indexBuffer = VK_NULL_HANDLE;  
-    std::vector<vk::raii::DeviceMemory> uniformBuffersMemory;
-    std::vector<vk::raii::Buffer> uniformBuffers;
+    vk::raii::Buffer                            indexBuffer = VK_NULL_HANDLE;
+    std::vector<vk::raii::DeviceMemory>         uniformBuffersMemory;
+    std::vector<vk::raii::Buffer>               uniformBuffers;
     std::vector<void*> uniformBuffersMapped;
     vk::raii::CommandPool                       commandPool = VK_NULL_HANDLE;
     vk::raii::DescriptorPool                    descriptorPool = VK_NULL_HANDLE;
@@ -56,9 +56,11 @@ public:
     Scene                                       main_scene;
     Scene                                       render_scene;
     UniformBufferObject                         ubo;
-    Role                                        role;
     BufferManager                               bufferM;
-
+    Role                                        role;
+    guiFlags                                    guiFlags;
+    bool                                        isInGame = true;
+    bool                                        isFocus = false;
     uint32_t imageCount = 0;
     size_t currentFrame = 0;
     struct QueueFamilyIndices {

@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "../core/context.hpp"
-//
-void initImGui();
-void drawImGui();
-void cleanupImGui();
+namespace gui {
+	void initImGui();
+	void drawImGui();
+	void cleanupImGui();
+}

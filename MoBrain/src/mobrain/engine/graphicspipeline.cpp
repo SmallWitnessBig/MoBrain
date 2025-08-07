@@ -77,15 +77,33 @@ void createGraphicsPipeline() {
         // 创建动态状态创建信息对象
         vk::PipelineDynamicStateCreateInfo dynamicstate;
         dynamicstate.setDynamicStates(dynamicStates);
+
         // 创建顶点输入状态创建信息对象
         vk::PipelineVertexInputStateCreateInfo vertexInputinfo;
-        // 获取顶点绑定描述
-        const auto bindingDescription = Vertex::getBindingDescription();
-        // 获取顶点属性描述
-        const auto attributeDescriptions = Vertex::getAttributeDescriptions();
+        const auto vertexBindingDescription = Vertex::getBindingDescription();
+        const auto vertexAttributeDescriptions = Vertex::getAttributeDescriptions();
+        const auto instanceBindingDescription = InstanceData::getBindingDescription();
+        const auto instanceAttributeDescriptions = InstanceData::getAttributeDescriptions();
+
+        std::vector<vk::VertexInputBindingDescription> bindingDescriptions = {
+            vertexBindingDescription,
+            instanceBindingDescription
+        };
+
+        std::vector<vk::VertexInputAttributeDescription> attributeDescriptions = {
+            vertexAttributeDescriptions
+        };
+
+        attributeDescriptions.insert(
+            attributeDescriptions.end(),
+            instanceAttributeDescriptions.begin(),
+            instanceAttributeDescriptions.end()
+        );
+
+
         vertexInputinfo
             .setVertexAttributeDescriptions(attributeDescriptions)  // 设置顶点属性描述
-            .setVertexBindingDescriptions(bindingDescription);  // 设置顶点绑定描述
+            .setVertexBindingDescriptions(bindingDescriptions);  // 设置顶点绑定描述
 
         // 创建输入装配状态创建信息对象
         vk::PipelineInputAssemblyStateCreateInfo inputAssembly;

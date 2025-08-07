@@ -1,8 +1,8 @@
-# Install script for directory: D:/MoBrain/MoBrain/MoBrain/src/mobrain
+# Install script for directory: C:/my/MoBrain/MoBrain/MoBrain/src/mobrain
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/MoBrain/MoBrain/MoBrain/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/my/MoBrain/MoBrain/MoBrain/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,32 +34,32 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/core/cmake_install.cmake")
+  include("C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/core/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/gui/cmake_install.cmake")
+  include("C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/gui/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/utils/cmake_install.cmake")
+  include("C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/utils/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/engine/cmake_install.cmake")
+  include("C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/engine/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/camera/cmake_install.cmake")
+  include("C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/camera/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/install_local_manifest.txt"
+  file(WRITE "C:/my/MoBrain/MoBrain/MoBrain/out/build/x64-Debug/src/mobrain/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

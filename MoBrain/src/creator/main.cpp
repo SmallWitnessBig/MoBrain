@@ -43,6 +43,23 @@ void settings() {
     // 设置键盘按键回调函数，将事件传递给 ImGui 处理
     glfwSetKeyCallback(app.window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
         ImGui_ImplGlfw_KeyCallback(window, key, scancode, action, mods);
+        if (key == GLFW_KEY_F3 && action == GLFW_PRESS) {
+            app.guiFlags.isStates = !app.guiFlags.isStates;
+        }
+        if (key == GLFW_KEY_Q && action == GLFW_PRESS) {
+            app.isInGame = !app.isInGame;
+
+            if (app.isInGame) {
+                glfwSetInputMode(app.window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+                int width, height;
+                glfwGetWindowSize(app.window, &width, &height);
+                glfwSetCursorPos(app.window, width / 2.0, height / 2.0);
+            }
+            else {
+                glfwSetInputMode(app.window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+            }
+        }
+
         });
     // 设置帧缓冲区大小回调函数，使用自定义的回调函数处理
     glfwSetFramebufferSizeCallback(app.window, framebufferResizeCallback);
@@ -57,8 +74,7 @@ void mainloop() {
         // 处理 GLFW 事件
         glfwPollEvents();
 
-        // 更新摄像机
-        camera::updateCamera();
+
         // 计算 FPS 和帧时间
         double currentTime = glfwGetTime();
         app.frameCount++;
@@ -71,28 +87,18 @@ void mainloop() {
         }
 
         // 绘制 ImGui 界面
-        drawImGui();
+        gui::drawImGui();
 
         // 绘制一帧画面
         drawFrame();
-
+        // 更新摄像机
+        camera::updateCamera();
+        app.role.update();
         // 计算当前帧的耗时
         auto endTime = std::chrono::high_resolution_clock::now();
         auto frameTime = std::chrono::duration<float, std::chrono::seconds::period>(endTime - starttime).count();
         app.frameTime = frameTime * 1000.0f;
     }
-}
-void createScene() {
-    for (float i = 0; i <50; i+=1.0f)
-    {
-        for (float j = 0; j <50; j+=1.0f)
-        {
-            auto c = std::make_shared<Cube>(glm::vec3{ i,j,0.0f }, glm::vec3{ i/10,j/10,0.0f });
-            app.render_scene.addObject(c);
-            app.bufferM.addObject(c);
-        }
-    }
-    
 }
 
 int main() {
@@ -104,19 +110,18 @@ int main() {
         // initVulkan() 函数用于初始化 Vulkan 上下文
 		initVulkan();   //vulkan context
         // initImGui() 函数用于初始化 ImGui 上下文
-        initImGui();    //ImGui context
+        gui::initImGui();    //ImGui context
         std::cout << "init finished" << std::endl;
-        createScene();
 
         settings();
-
+        std::cout<<"add scene"<<std::endl;
+        app.render_scene.initScene();
         mainloop();
-
         // 等待 Vulkan 设备完成所有操作
         app.device.waitIdle();
 
         // 清理 ImGui 资源
-        cleanupImGui();
+        gui::cleanupImGui();
         // 清理应用程序资源
         cleanupApp();
     }

@@ -17,7 +17,7 @@ target_include_directories(imgui PUBLIC
     ${CMAKE_SOURCE_DIR}/include
 )
 
-# �����Ҫ�ĺ�
+
 target_compile_definitions(imgui PRIVATE 
     IMGUI_IMPL_VULKAN_HAS_DYNAMIC_RENDERING
 )

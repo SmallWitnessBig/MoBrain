@@ -61,37 +61,41 @@ void recordCommandBuffer(const vk::raii::CommandBuffer& commandbuffer, uint32_t 
         *app.descriptorSets[app.currentFrame],
         nullptr
     );
-    // 优化1：使用引用避免重复查找
+
     auto& vertexBlocks = app.bufferM.vertexBlocks;
     auto& indexBlocks = app.bufferM.indexBlocks;
+    auto& instanceBlocks = app.bufferM.instanceBlocks;
     auto& objectLocations = app.bufferM.objectLocations;
+    auto& instanceLocations = app.bufferM.instanceLocations;
+    auto& instanceFirstLocations = app.bufferM.instanceFirstLocations;
 
-    // 优化2：按缓冲区块分组绘制，减少API调用
-    std::map<std::pair<uint32_t, uint32_t>, std::vector<std::shared_ptr<Object>>> groupedObjects;
+    // Render Cube
+    {
+        auto Loc = instanceFirstLocations[InstanceType::CUBE];
 
-    for (auto& iter : app.render_scene.data) {
-        for (auto& ob : iter.second) {
-            if (auto it = objectLocations.find(ob); it != objectLocations.end()) {
-                auto& loc = it->second;
-                groupedObjects[{loc.vertexBlockIndex, loc.indexBlockIndex}].push_back(ob);
-            }
+        auto& vertexBuffer = vertexBlocks[Loc.vertexBlockIndex].buffer;
+        auto& indexBuffer = indexBlocks[Loc.indexBlockIndex];
+
+
+        for (auto& i : instanceBlocks) {
+            std::array<vk::Buffer,2> buffers = {*vertexBuffer,*i.buffer};
+            std::array<vk::DeviceSize,2> offsets = {Loc.vertexOffset,0};
+            commandbuffer.bindVertexBuffers(0, buffers, offsets);
+            commandbuffer.bindIndexBuffer(*indexBuffer.buffer, 0, vk::IndexType::eUint32);
+            commandbuffer.drawIndexed(
+                36,
+                i.used/sizeof(InstanceData),
+                Loc.indexOffset,
+                Loc.vertexOffset,
+                0
+            );
+
         }
+        
     }
 
-    // 优化3：按组绘制，减少缓冲区绑定调用
-    for (auto& [blockPair, objects] : groupedObjects) {
-        auto [vertexBlockIndex, indexBlockIndex] = blockPair;
-        auto& vertexBlock = vertexBlocks[vertexBlockIndex];
-        auto& indexBlock = indexBlocks[indexBlockIndex];
 
-        commandbuffer.bindVertexBuffers(0, *vertexBlock.buffer, { 0 });
-        commandbuffer.bindIndexBuffer(*indexBlock.buffer, 0, vk::IndexType::eUint32);
 
-        for (auto& ob : objects) {
-            auto& loc = objectLocations[ob];
-            commandbuffer.drawIndexed(ob->index_count, 1, loc.indexOffset, loc.vertexOffset, 0);
-        }
-    }
     // 使用 ImGui 渲染绘制数据
     ImGui_ImplVulkan_RenderDrawData(ImGui::GetDrawData(), *commandbuffer);
 

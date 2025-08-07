@@ -21,3 +21,4 @@
 void createInstance();
 void createSurface();
 void initVulkan();
+void initInstanceData();

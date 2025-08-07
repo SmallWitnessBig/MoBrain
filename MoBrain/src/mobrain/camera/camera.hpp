@@ -3,7 +3,6 @@
 #include <functional>
 
 namespace camera{
-    // 使用 extern 关键字声明变量，避免多重定义问题
     extern glm::vec3 pos;
     extern glm::vec3 front;
     extern glm::vec3 up;
