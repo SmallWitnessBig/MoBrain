@@ -75,10 +75,7 @@ void createDescriptorPool() {
         { vk::DescriptorType::eSampler, 30 },  // 采样器
         { vk::DescriptorType::eCombinedImageSampler, 30 },  // 组合图像采样器
         { vk::DescriptorType::eSampledImage, 30 },  // 采样图像
-        { vk::DescriptorType::eStorageImage, 30 },  // 存储图像
         { vk::DescriptorType::eUniformBuffer, 30+static_cast<uint32_t>(MAX_FRAMES_IN_FLIGHT)},  // 统一缓冲区
-        { vk::DescriptorType::eStorageBuffer, 30 },  // 存储缓冲区
-        { vk::DescriptorType::eStorageTexelBuffer, 30 },  // 存储纹素缓冲区
         { vk::DescriptorType::eUniformTexelBuffer, 30 },  // 统一纹素缓冲区
         { vk::DescriptorType::eStorageBufferDynamic, 30 },  // 动态存储缓冲区
         { vk::DescriptorType::eUniformBufferDynamic, 30 },  // 动态统一缓冲区

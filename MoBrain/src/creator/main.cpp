@@ -1,25 +1,16 @@
 ﻿// 此文件为程序的主入口文件，负责初始化应用程序、Vulkan 上下文和 ImGui 界面，
 // 设置各类回调函数，处理主循环中的事件、绘制界面和计算帧率，
 // 并在程序结束时进行资源清理，同时捕获并处理可能出现的异常。
-#include "../mobrain/gui/gui.hpp"
-#include "vulkaninit.hpp"
-#include "context.hpp"
-#include "camera.hpp"
+
+#include "gui/gui.hpp"
+#include "engine/vulkaninit.hpp"
+#include "core/context.hpp"
+#include "camera/camera.hpp"
 #include <GLFW/glfw3.h>
-#include <iostream>  
+#include <iostream>
 #include <chrono>
 
-/**
- * @brief 程序主函数，负责整个应用程序的生命周期管理。
- * 
- * 1. 初始化应用程序、Vulkan 上下文和 ImGui 界面。
- * 2. 设置各类 GLFW 回调函数，用于处理用户输入和窗口事件。
- * 3. 进入主循环，处理事件、绘制界面并计算帧率。
- * 4. 程序结束时进行资源清理。
- * 5. 捕获并处理可能出现的异常。
- * 
- * @return int 程序退出状态码，0 表示正常退出，非 0 表示异常退出。
- */
+
 void settings() {
     // 设置各类回调函数，用于处理用户输入和窗口事件
 // 设置鼠标光标位置回调函数，将事件传递给 ImGui 处理
@@ -44,7 +35,7 @@ void settings() {
     glfwSetKeyCallback(app.window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
         ImGui_ImplGlfw_KeyCallback(window, key, scancode, action, mods);
         if (key == GLFW_KEY_F3 && action == GLFW_PRESS) {
-            app.guiFlags.isStates = !app.guiFlags.isStates;
+            app.guiFlags.isOpenStates = !app.guiFlags.isOpenStates;
         }
         if (key == GLFW_KEY_Q && action == GLFW_PRESS) {
             app.isInGame = !app.isInGame;
@@ -70,7 +61,7 @@ void settings() {
 void mainloop() {
     while (!glfwWindowShouldClose(app.window)) {
         // 记录当前帧开始时间
-        auto starttime = std::chrono::high_resolution_clock::now();
+        auto startTime = std::chrono::high_resolution_clock::now();
         // 处理 GLFW 事件
         glfwPollEvents();
 
@@ -87,20 +78,29 @@ void mainloop() {
         }
 
         // 绘制 ImGui 界面
-        gui::drawImGui();
-
-        // 绘制一帧画面
+        gui::drawImGui();// 绘制一帧画面
         drawFrame();
         // 更新摄像机
         camera::updateCamera();
         app.role.update();
+
         // 计算当前帧的耗时
         auto endTime = std::chrono::high_resolution_clock::now();
-        auto frameTime = std::chrono::duration<float, std::chrono::seconds::period>(endTime - starttime).count();
+        auto frameTime = std::chrono::duration<float, std::chrono::seconds::period>(endTime - startTime).count();
         app.frameTime = frameTime * 1000.0f;
     }
 }
-
+/**
+ * @brief 程序主函数，负责整个应用程序的生命周期管理。
+ *
+ * 1. 初始化应用程序、Vulkan 上下文和 ImGui 界面。
+ * 2. 设置各类 GLFW 回调函数，用于处理用户输入和窗口事件。
+ * 3. 进入主循环，处理事件、绘制界面并计算帧率。
+ * 4. 程序结束时进行资源清理。
+ * 5. 捕获并处理可能出现的异常。
+ *
+ * @return int 程序退出状态码，0 表示正常退出，非 0 表示异常退出。
+ */
 int main() {
     try {
 
@@ -117,6 +117,7 @@ int main() {
         std::cout<<"add scene"<<std::endl;
         app.render_scene.initScene();
         mainloop();
+        app.render_scene.writeIntoFile();
         // 等待 Vulkan 设备完成所有操作
         app.device.waitIdle();
 
@@ -130,6 +131,7 @@ int main() {
         // use err.code() to check err type
         std::cerr<<"vk::SystemError - code: {} "<<err.code().message();
         std::cerr<<"vk::SystemError - what: {}"<<err.what();
+        return EXIT_FAILURE;
     }
     // 捕获标准异常并输出错误信息，程序异常退出
     catch(const std::exception& e) {
@@ -138,3 +140,5 @@ int main() {
 	}
     return 0;
 }
+
+

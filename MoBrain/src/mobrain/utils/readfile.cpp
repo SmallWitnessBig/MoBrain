@@ -1,7 +1,7 @@
 ﻿
 #include "readfile.hpp"
 #include <iostream>
-std::vector<char> atebinaryFile(const std::string& filename) {
+std::vector<char> ateBinaryFile(const std::string& filename) {
 
     try
     {

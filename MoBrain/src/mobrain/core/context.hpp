@@ -1,8 +1,12 @@
 ﻿#pragma once
-
-#include "structs.hpp"
-#include "buffers.hpp"
-#define MAX_FRAMES_IN_FLIGHT 2
+#include <optional>
+#define GLFW_INCLUDE_VULKAN
+#include <GLFW/glfw3.h>
+#include <imgui/backends/imgui_impl_glfw.h>
+#include <imgui/backends/imgui_impl_vulkan.h>
+#include "structs/structs.hpp"
+#include "networks/networkManager.hpp"
+#define MAX_FRAMES_IN_FLIGHT 3
 
 
 
@@ -15,9 +19,9 @@ public:
     bool framebufferResized = false;
 
     // Vulkan
-    vk::raii::Context                           vcxt;
+    vk::raii::Context                           vulkanContext;
 #ifdef _DEBUG
-    vk::raii::DebugReportCallbackEXT            debugreport = VK_NULL_HANDLE;
+    vk::raii::DebugReportCallbackEXT            debugReport = VK_NULL_HANDLE;
 #endif
     vk::raii::Instance                          instance = VK_NULL_HANDLE;
     vk::raii::SurfaceKHR                        surface = VK_NULL_HANDLE;
@@ -53,14 +57,9 @@ public:
     std::vector<vk::raii::Semaphore>            imageAvailableSemaphores;
     std::vector<vk::raii::Semaphore>            renderFinishedSemaphores;
     std::vector<vk::raii::Fence>                inFlightFences;
-    Scene                                       main_scene;
-    Scene                                       render_scene;
+    std::vector<bool>                           imagesInFlight;
     UniformBufferObject                         ubo;
     BufferManager                               bufferM;
-    Role                                        role;
-    guiFlags                                    guiFlags;
-    bool                                        isInGame = true;
-    bool                                        isFocus = false;
     uint32_t imageCount = 0;
     size_t currentFrame = 0;
     struct QueueFamilyIndices {
@@ -83,8 +82,24 @@ public:
     // Performance
     float frameTime = 0.0f;
     float fps = 0.0f;
-    size_t frameCount = 0;
+    float frameCount = 0;
     double lastTime = 0.0;
+
+    //scene
+    Scene                                       main_scene;
+    Scene                                       render_scene;
+    Role                                        role;
+    guiFlags                                    guiFlags;
+    bool                                        isInGame = true;
+    bool                                        isFocus = false;
+    bool                                        isFrame = false;
+
+
+    //network
+    bool                                        isRunNet   = false;
+    networkManager                              net;
+    NeuronGroupPreset                           neuronGroupPreset;
+    NeuronBlockPreset                           neuronBlockPreset;
 };
 
 extern AppState app;

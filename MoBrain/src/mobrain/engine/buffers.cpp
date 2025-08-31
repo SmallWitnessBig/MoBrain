@@ -503,13 +503,6 @@ void BufferManager::addCube(const Cube* cube) {
     }
 };
 
-void BufferManager::addCubes(const Cubes* Cubes) {
-    if (Cubes!=nullptr)
-    {
-        auto cube = new Cube(Cubes->position, Cubes->color);
-        addCube(cube);
-    }
-}
 
 
 // 删除对象

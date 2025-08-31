@@ -42,9 +42,9 @@ void createGraphicsPipeline() {
         // 拼接片段着色器文件路径
         auto fragDir = baseDir / "shaders" / "graphics.frag.spv";
         // 读取顶点着色器二进制文件内容
-        const std::vector<char> vertShaderCode = atebinaryFile(vertDir.string());
+        const std::vector<char> vertShaderCode = ateBinaryFile(vertDir.string());
         // 读取片段着色器二进制文件内容
-        const std::vector<char> fragShaderCode = atebinaryFile(fragDir.string());
+        const std::vector<char> fragShaderCode = ateBinaryFile(fragDir.string());
         // 创建顶点着色器模块
         vk::raii::ShaderModule vertex = createShaderModule(vertShaderCode);
         // 创建片段着色器模块

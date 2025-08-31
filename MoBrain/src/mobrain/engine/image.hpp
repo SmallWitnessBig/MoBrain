@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "context.hpp"
+#include "core/context.hpp"
 
 void createImage(
     const uint32_t width,

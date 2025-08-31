@@ -2,7 +2,7 @@
 #include "../core/context.hpp"
 #include "vulkaninit.hpp"
 #include "../gui/gui.hpp"
-#include "camera.hpp"
+#include "camera/camera.hpp"
 #include <random>
 #include <chrono>
 

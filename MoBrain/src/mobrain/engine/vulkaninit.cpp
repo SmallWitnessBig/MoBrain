@@ -23,8 +23,7 @@ void initVulkan() {
     
     //depth
     createDepthResources();
-    
-    //framebuffers should be created after depth resources
+
     createFramebuffers();
     
     createDescriptorSetLayout();
@@ -148,7 +147,7 @@ void createInstance() {
     constexpr bool ENABLE_VALIDATION_LAYER = true;
     // 检查所需的验证层是否可用
     if (![REQUIRED_LAYERS] {
-        const auto layers = app.vcxt.enumerateInstanceLayerProperties();
+        const auto layers = app.vulkanContext.enumerateInstanceLayerProperties();
         std::set<std::string> requiredLayers(REQUIRED_LAYERS.begin(), REQUIRED_LAYERS.end());
         for (const auto& layer : layers) {
             requiredLayers.erase(layer.layerName);
@@ -163,7 +162,7 @@ void createInstance() {
     createInfo.setPEnabledLayerNames(REQUIRED_LAYERS);
 #endif
 
-    app.instance = app.vcxt.createInstance(createInfo);
+    app.instance = app.vulkanContext.createInstance(createInfo);
 #ifdef _DEBUG
     app.instance.createDebugUtilsMessengerEXT(DMcreateInfo);
 #endif // _DEBUG
@@ -178,9 +177,3 @@ void createSurface() {
     }
     app.surface = vk::raii::SurfaceKHR(app.instance, cSurface);
 }
-
-void initInstanceData() {
-    InstanceData i;
-
-
-};

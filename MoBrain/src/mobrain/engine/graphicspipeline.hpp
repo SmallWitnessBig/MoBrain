@@ -1,5 +1,5 @@
 ﻿#pragma once
 #include "vulkaninit.hpp"
-#include "readfile.hpp"
-#include "structs.hpp"
+#include "utils/readfile.hpp"
+#include "structs/structs.hpp"
 void createGraphicsPipeline();

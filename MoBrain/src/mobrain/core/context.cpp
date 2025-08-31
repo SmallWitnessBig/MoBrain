@@ -32,8 +32,6 @@ void cleanupApp() {
     for(const auto& it:app.uniformBuffersMemory){
         it.unmapMemory();
     }
-
-
     glfwDestroyWindow(app.window);
     glfwTerminate();
 }

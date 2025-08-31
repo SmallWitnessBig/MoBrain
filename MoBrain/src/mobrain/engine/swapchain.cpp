@@ -1,4 +1,10 @@
 ﻿#include "swapchain.hpp"
+/**
+* 交换链是一组等待显示到屏幕的图像队列
+* 应用程序从队列获取图像进行渲染，完成后返回队列
+* 窗口表面从队列获取渲染完成的图像并呈现到窗口
+* 交换链同步图像呈现与屏幕刷新率
+*/
 
 /**
  * @brief 选择交换链表面格式
@@ -28,13 +34,24 @@ static vk::SurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<vk::Surfac
  * @param availablePresentModes 可用的呈现模式列表
  * @return 选中的呈现模式
  */
+
+/** vk::PresentModeKHR	含义
+*   eImmediate	    图像会立即传输到屏幕，可能会导致图像撕裂。
+*   eFifo	        先进先出的队列。若队列已满，则程序必须等待。
+*                   这与现代游戏中的垂直同步最相似。显示刷新的时刻称为“垂直消隐”。
+*   eFifoRelaxed	第二种的变体，图像在最终到达时立即传输，可能会导致明显的撕裂。
+*                   仅当应用程序迟到且队列在上次垂直消隐时为空，此模式才与前一种模式不同。
+*   eMailbox	    第二种的变体，队列已满时将已排队的图像简单地替换为较新的图像。
+*                   模式可用于尽可能快地渲染帧，通常被称为“三重缓冲”。
+*/
+
 static vk::PresentModeKHR chooseSwapPresentMode(const std::vector<vk::PresentModeKHR>& availablePresentModes) {
     for (const auto& availablePresentMode : availablePresentModes) {
         if (availablePresentMode == vk::PresentModeKHR::eMailbox) {
-            return availablePresentMode;
+            return availablePresentMode; // 三重缓冲
         }
     }
-    return vk::PresentModeKHR::eFifo;
+    return vk::PresentModeKHR::eFifo; // 垂直同步
 }
 
 /**
@@ -76,6 +93,7 @@ SwapChainSupportDetails querySwapChainSupport(const vk::raii::PhysicalDevice& ph
 
     details.capabilities = physicalDevice.getSurfaceCapabilitiesKHR(app.surface);
     details.formats = physicalDevice.getSurfaceFormatsKHR(app.surface);
+
     details.presentModes = physicalDevice.getSurfacePresentModesKHR(app.surface);
     
     return details;
@@ -102,7 +120,15 @@ void createSwapChain() {
     if (details.capabilities.maxImageCount > 0 && app.imageCount > details.capabilities.maxImageCount) {
         app.imageCount = details.capabilities.maxImageCount;
     }
+    vk::FormatProperties formatProps = app.physicalDevice.getFormatProperties(surfaceFormat.format);
+    bool supportsStorage = (formatProps.optimalTilingFeatures & vk::FormatFeatureFlagBits::eStorageImage) != vk::FormatFeatureFlags{};
 
+    vk::ImageUsageFlags imageUsage = vk::ImageUsageFlagBits::eColorAttachment;
+
+    // Only add storage usage if supported
+    if (supportsStorage) {
+        imageUsage |= vk::ImageUsageFlagBits::eStorage;
+    }
     // 创建交换链创建信息对象
     vk::SwapchainCreateInfoKHR ScreateInfo{};
     // 配置交换链创建信息
@@ -113,31 +139,35 @@ void createSwapChain() {
         .setImageColorSpace(surfaceFormat.colorSpace)
         .setImageExtent(extent)
         .setImageArrayLayers(1)
-        .setImageUsage(vk::ImageUsageFlagBits::eColorAttachment)
         .setClipped(true)
+        //禁用图像变换
         .setPresentMode(presentMode)
         .setCompositeAlpha(vk::CompositeAlphaFlagBitsKHR::eOpaque)
         .setPreTransform(details.capabilities.currentTransform)
-        .setOldSwapchain(nullptr);
+        .setOldSwapchain(nullptr)
+        .setImageUsage(imageUsage);
 
     // 获取队列族索引
     QueueFamilyIndices QF = findQueueFamilies(app.physicalDevice);
     
     // 准备队列族索引列表
-    std::vector<uint32_t> queueFamilyIndices{ QF.graphicsFamily.value(), QF.presentFamily.value() };
+    std::vector queueFamilyIndices{ QF.graphicsFamily.value(), QF.presentFamily.value() };
     
     // 处理队列族共享情况
     if (QF.graphicsFamily != QF.presentFamily) {
         ScreateInfo.imageSharingMode = vk::SharingMode::eConcurrent;
+        //图像可以在多个队列族之间使用，而无需显式的所有权传输。
         ScreateInfo.setQueueFamilyIndices(queueFamilyIndices);
     } else {
         ScreateInfo.imageSharingMode = vk::SharingMode::eExclusive;
+        //图像一次由一个队列族拥有，并且必须显式传输所有权，然后才能在另一个队列族中使用它。此选项提供最佳性能。
         ScreateInfo.setPQueueFamilyIndices(nullptr);
     }
 
     try {
         // 创建交换链
         app.swapChain = app.device.createSwapchainKHR(ScreateInfo);
+        std::cout<<"eeee\n";
     } catch (const vk::SystemError& err) {
         // 捕获并输出 vk::SystemError 错误信息
         std::cerr << "vk::SystemError - code: " << err.code().message() << std::endl;

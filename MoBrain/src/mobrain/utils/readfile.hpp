@@ -4,4 +4,4 @@
 #include <string>
 #include <stdexcept>
 
-std::vector<char> atebinaryFile(const std::string& filename);
+std::vector<char> ateBinaryFile(const std::string& filename);
